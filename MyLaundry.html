@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyLaundry - Pengelolaan Laundry Kiloan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="loginPage" class="login-page">
+    <div class="login-visual">
+      <div class="brand-icon">🧺</div>
+      <h1>MyLaundry</h1>
+      <p>Pakaian Bersih, Hidup Lebih Nyaman</p>
+      <div class="laundry-illustration">🫧 🧺 👕</div>
+    </div>
+    <form id="loginForm" class="login-card">
+      <h2>Login ke MyLaundry</h2>
+      <p>Masukkan akun pemilik atau petugas laundry.</p>
+      <label for="username">Username</label>
+      <input id="username" name="username" autocomplete="username" required placeholder="Masukkan username">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Masukkan password">
+      <button type="submit">Login</button>
+      <p class="demo-info">Demo: pemilik / 123 atau petugas / 123</p>
+      <p id="loginError" class="error" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="appPage" class="app-page hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">🧺 MyLaundry</div>
+      <nav id="navigation">
+        <button data-page="dashboard" class="nav-item active">▦ Dashboard</button>
+        <button data-page="orders" class="nav-item">▤ Order Laundry</button>
+        <button data-page="customers" class="nav-item">♙ Pelanggan</button>
+        <button data-page="services" class="nav-item">▧ Jenis Layanan</button>
+        <button data-page="reports" class="nav-item owner-only">▥ Laporan</button>
+      </nav>
+      <button id="logoutBtn" class="logout">↪ Keluar</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SISTEM PENGELOLAAN LAUNDRY KILOAN</p>
+          <h1 id="pageTitle">Dashboard</h1>
+        </div>
+        <div class="user-pill">● <span id="roleLabel">Pemilik</span></div>
+      </header>
+      <div id="pageContent"></div>
+    </main>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
